@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AUREUM | High-End Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "on-error": "#690005",
+                "tertiary-container": "#b5b3ac",
+                "surface-container-low": "#1c1b1b",
+                "primary": "#f2ca50",
+                "tertiary-fixed": "#e5e2db",
+                "on-primary-fixed-variant": "#574500",
+                "surface-container-highest": "#353534",
+                "on-secondary-fixed": "#241a00",
+                "error": "#ffb4ab",
+                "background": "#131313",
+                "inverse-primary": "#735c00",
+                "surface-bright": "#393939",
+                "on-primary-container": "#554300",
+                "on-primary": "#3c2f00",
+                "surface-container-high": "#2a2a2a",
+                "on-error-container": "#ffdad6",
+                "error-container": "#93000a",
+                "on-tertiary": "#31312b",
+                "surface": "#131313",
+                "tertiary": "#d1cec7",
+                "surface-container-lowest": "#0e0e0e",
+                "outline": "#99907c",
+                "surface-container": "#201f1f",
+                "secondary": "#eac249",
+                "surface-tint": "#e9c349",
+                "on-tertiary-fixed": "#1c1c17",
+                "on-secondary": "#3d2f00",
+                "on-surface": "#e5e2e1",
+                "on-tertiary-container": "#464540",
+                "tertiary-fixed-dim": "#c9c6bf",
+                "surface-dim": "#131313",
+                "primary-fixed": "#ffe088",
+                "secondary-fixed-dim": "#eac249",
+                "on-tertiary-fixed-variant": "#474741",
+                "surface-variant": "#353534",
+                "on-secondary-fixed-variant": "#584400",
+                "inverse-on-surface": "#313030",
+                "secondary-container": "#b08c10",
+                "primary-container": "#d4af37",
+                "on-primary-fixed": "#241a00",
+                "secondary-fixed": "#ffe08b",
+                "outline-variant": "#4d4635",
+                "primary-fixed-dim": "#e9c349",
+                "on-secondary-container": "#352800",
+                "on-background": "#e5e2e1",
+                "inverse-surface": "#e5e2e1",
+                "on-surface-variant": "#d0c5af"
+              },
+              fontFamily: {
+                "headline": ["Noto Serif", "serif"],
+                "body": ["Inter", "sans-serif"],
+                "label": ["Inter", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        .serif-display {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+</head>
+<body class="bg-background selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 rounded-none bg-zinc-900/70 backdrop-blur-[20px] flex justify-between items-center px-12 py-8 w-full">
+<div class="text-2xl font-serif font-bold tracking-tighter text-yellow-500 serif-display">AUREUM</div>
+<div class="hidden md:flex space-x-12">
+<a class="font-serif text-sm uppercase tracking-[0.2em] font-medium text-zinc-400 hover:text-white transition-all duration-300" href="#about">About</a>
+<a class="font-serif text-sm uppercase tracking-[0.2em] font-medium text-zinc-400 hover:text-white transition-all duration-300" href="#services">Services</a>
+<a class="font-serif text-sm uppercase tracking-[0.2em] font-medium text-zinc-400 hover:text-white transition-all duration-300" href="#portfolio">Portfolio</a>
+<a class="font-serif text-sm uppercase tracking-[0.2em] font-medium text-zinc-400 hover:text-white transition-all duration-300" href="#contact">Contact</a>
+</div>
+<button class="bg-gradient-to-tr from-primary to-primary-container text-on-primary px-8 py-3 text-sm font-serif uppercase tracking-widest font-bold hover:translate-y-[-2px] transition-transform duration-300 active:scale-95">
+        Get In Touch
+    </button>
+</nav>
+<!-- Hero Section -->
+<section class="hero min-h-screen flex flex-col justify-center items-start px-12 lg:px-24 pt-32">
+<div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 z-10">
+<span class="text-primary font-label uppercase tracking-[0.4em] text-xs mb-6 block">Digital Architect &amp; Visionary</span>
+<h1 class="serif-display text-6xl md:text-8xl font-bold leading-tight tracking-tighter text-on-surface mb-8">
+                Crafting <span class="text-primary italic">Timeless</span> Digital Legacies.
+            </h1>
+<p class="text-on-surface-variant text-lg max-w-lg mb-12 leading-relaxed font-body">
+                Aureum is a boutique design practice dedicated to the intersection of luxury, utility, and digital precision. We build high-conversion experiences for the modern elite.
+            </p>
+<div class="flex items-center gap-8">
+<a class="bg-gradient-to-tr from-primary to-primary-container text-on-primary px-10 py-5 text-sm font-bold uppercase tracking-widest hover:brightness-110 transition-all" href="#portfolio">
+                    See My Work
+                </a>
+<a class="text-primary border-b border-primary/30 pb-1 text-sm uppercase tracking-widest font-bold hover:border-primary transition-all" href="#about">
+                    Learn More
+                </a>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-[4/5] bg-surface-container-high grayscale hover:grayscale-0 transition-all duration-700 overflow-hidden relative group">
+<img alt="Professional Portrait" class="w-full h-full object-cover" data-alt="Monochrome professional portrait of a male designer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDGvGSrWZhbuceWZcc7ng5065p4OtKvmt7VnoSDjjIuJiazi9SF45r9ErDDqivGnHHyXwyiainC2LVNhRAkfdadQiG2ixATtvwHzjwRVNCdZqVtaRMSWG6kJY8WSmI8r3m5I5vkAdctTDGCY-uBpj8K_n9MEGutBi57kYlnjLDtROXYaWSKeehoguIlIQBkBKOmLLSXTP-djVA6AHCgdvIaS5MomKAYKvbG59tJK7Efcxb9rHUaW5qS_ayKLLgJjqYOvMYahkeCnye"/>
+<div class="absolute inset-0 border-[20px] border-surface-container-lowest/50 pointer-events-none"></div>
+</div>
+<div class="absolute -bottom-8 -right-8 w-48 h-48 border border-primary/20 -z-10"></div>
+</div>
+</div>
+</section>
+<!-- About Me Section -->
+<section class="section py-32 bg-surface-container-low" id="about">
+<div class="px-12 lg:px-24">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="order-2 lg:order-1">
+<h2 class="serif-display text-4xl md:text-5xl font-bold text-primary mb-12">The Philosophy of Gold</h2>
+<div class="space-y-6 text-on-surface-variant font-body text-lg leading-relaxed">
+<p>
+                        In an age of fleeting digital trends, Aureum stands for permanence. My work is informed by the principles of classical architecture—proportion, clarity, and structural integrity—translated into the digital realm.
+                    </p>
+<p>
+                        With over a decade of experience partnering with Fortune 500 brands and independent visionaries, I specialize in stripping away the noise to reveal the essential character of a product.
+                    </p>
+<div class="pt-8 grid grid-cols-2 gap-8">
+<div>
+<div class="text-3xl serif-display text-on-surface mb-2">120+</div>
+<div class="text-xs uppercase tracking-widest text-primary font-bold">Projects Delivered</div>
+</div>
+<div>
+<div class="text-3xl serif-display text-on-surface mb-2">15</div>
+<div class="text-xs uppercase tracking-widest text-primary font-bold">Awards Won</div>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<div class="aspect-square bg-surface-container-lowest overflow-hidden">
+<img alt="Studio Space" class="w-full h-full object-cover opacity-60" data-alt="Minimalist luxury office with dark interior design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXrxkDhvUFPHlo-x2IpwdF40fI_0wYzFEGlkJfzUcDxduS2ieLfHuqQxBY7H1rXkAwWHbdwNOuns8ziU46rf_ZubQwQHdLnglofnsE2V2mJMX55HdgzWPyKT4tQkZ7Y41r_9P3pmJGz9cYiYu-ft8HBRvgj__vRlBLZh8IwhO_KuQ2IahA2HXBmF1o5AXniMa6mY4WncNjtlPyY2D2WpU12h9aGT28bxoB33rC75killH9nWlXLEiThTYUN_cCD9E3c2XUWZp6RF3O"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- My Services -->
+<section class="section py-32" id="services">
+<div class="px-12 lg:px-24">
+<div class="mb-20">
+<span class="text-primary font-label uppercase tracking-[0.4em] text-xs mb-4 block">Expertise</span>
+<h2 class="serif-display text-5xl font-bold text-on-surface">Curated Solutions</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+<!-- Service 1 -->
+<div class="group p-12 border border-outline-variant/20 hover:bg-surface-container-high transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-4xl mb-8 block" data-icon="palette">palette</span>
+<h3 class="serif-display text-2xl mb-6 text-on-surface group-hover:text-primary transition-colors">UI/UX Design</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8">Creating intuitive journeys that resonate on an emotional level. Experience design that prioritizes both beauty and conversion.</p>
+<ul class="text-xs uppercase tracking-widest space-y-3 font-bold text-zinc-500">
+<li>User Research</li>
+<li>Prototyping</li>
+<li>Interface Design</li>
+</ul>
+</div>
+<!-- Service 2 -->
+<div class="group p-12 border-y md:border-y-0 md:border-x border-outline-variant/20 hover:bg-surface-container-high transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-4xl mb-8 block" data-icon="code">code</span>
+<h3 class="serif-display text-2xl mb-6 text-on-surface group-hover:text-primary transition-colors">Development</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8">Pixel-perfect frontend execution with Next.js and Tailwind CSS. Performant, scalable, and secure codebases.</p>
+<ul class="text-xs uppercase tracking-widest space-y-3 font-bold text-zinc-500">
+<li>React / Next.js</li>
+<li>Tailwind Systems</li>
+<li>API Integration</li>
+</ul>
+</div>
+<!-- Service 3 -->
+<div class="group p-12 border border-outline-variant/20 hover:bg-surface-container-high transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-4xl mb-8 block" data-icon="diamond">diamond</span>
+<h3 class="serif-display text-2xl mb-6 text-on-surface group-hover:text-primary transition-colors">Consulting</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8">Strategic positioning and creative direction for luxury startups and established legacy brands looking to modernize.</p>
+<ul class="text-xs uppercase tracking-widest space-y-3 font-bold text-zinc-500">
+<li>Brand Strategy</li>
+<li>Creative Direction</li>
+<li>Audit &amp; Optimization</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section (Bento Grid) -->
+<section class="section py-32 bg-surface-container-lowest" id="portfolio">
+<div class="px-12 lg:px-24">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div>
+<span class="text-primary font-label uppercase tracking-[0.4em] text-xs mb-4 block">Archive</span>
+<h2 class="serif-display text-5xl font-bold text-on-surface">Selected Works</h2>
+</div>
+<div class="text-on-surface-variant font-body max-w-sm text-right">
+                Explore a curation of digital artifacts designed for impact and endurance.
+            </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[900px]">
+<div class="md:col-span-8 group relative overflow-hidden bg-surface">
+<img alt="Project One" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Abstract dark wave art with gold highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAT0Tb3XPcvBoNjE4x4_oIO57E_eBqLurN3WThabpqOGgs7I1XTKm3oTaX70xuUkP_F2K8lKP2RCkCVFl-IwQsspVynvHN-2pNokRafDEwAC4KpT5DCoOdHWAHXve6pC2MdqAnjp6IZNlWNNKv8MKFSl_pSJGi_2vpJIkwg13qfF7hgnu0q02IdhBtsA1NvKnSkG3kmhXSwHMqki51Vu1AYtE3ilxpHwgDB9AcFWlv_foR2WhyoN_IBVxLZ0mOwGjYZGWDe47D_1Jk"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-12">
+<span class="text-primary text-xs uppercase tracking-widest mb-2 font-bold">Case Study</span>
+<h4 class="serif-display text-3xl text-white">Lumina E-Commerce</h4>
+</div>
+</div>
+<div class="md:col-span-4 group relative overflow-hidden bg-surface">
+<img alt="Project Two" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Modern tech workstation with luxury setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeaFXYZwcgz7gaA8EOGysruLdc3TARdCTTIHzxlBICL-S9iijUDmTNm6QrhJYeSFFsECQMM7X47r4nlznwz7r2Rejx8ZgXRSYjzAetVU5b3ES8HKgimHNojqUD9qSPVNxTNrZ2vj8uTVpByCeUtfHGBF5PDhbIr153hnO2gNGZBzbTzPdLGaN2uqJeld89mbJiCsnOwqwjP33EdOV4gtEzxnFvGVAJEchBfp9TIEHwtffKUEy5TLJsZ2LuXkPjI31Z1FFU8ZVAkim9"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-12">
+<span class="text-primary text-xs uppercase tracking-widest mb-2 font-bold">Fintech</span>
+<h4 class="serif-display text-3xl text-white">Aura Bank App</h4>
+</div>
+</div>
+<div class="md:col-span-4 group relative overflow-hidden bg-surface">
+<img alt="Project Three" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Minimalist fashion boutique interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSpQGMLk5D2JIUV93gbqPXOImLqYRTF_6LVaoZJ1n7D1_dgTS72XKoehDO38cv98T6HkFLvfxultirkT-YEfCjRmPrZMn6jcKhjCK8h5L28zROUIoKw1Q0XR5-aRDrT6rCiw8KY0RSSy7Tm7b52h0nKf_vO0lxOCFVLUDImkc7d8aNpQ7S6z7vqL1J5kl7bIuQvY3vveuYCXEcBalBVLu7le2eh4VAU4_fzs5Bm_xnKhPsqvZVJEEcAU3D5MoPIfvK882BiVwuUGyf"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-12">
+<span class="text-primary text-xs uppercase tracking-widest mb-2 font-bold">Fashion</span>
+<h4 class="serif-display text-3xl text-white">Elysium Retail</h4>
+</div>
+</div>
+<div class="md:col-span-8 group relative overflow-hidden bg-surface">
+<img alt="Project Four" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Golden architecture patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXsT5mvdkU5fW2NEjOeaVQ5EjZ7MiNRtPpFiH_eGUVbTaCzLqycHx3RxABl-zA8gla7IRnJUfWQ1JcLnuX6JgB8JaTr8afHzhRPLWbHnMb0nUcNEyMLQHDU1bOl7Mc6RWycqBRxmqaBXgHCI-vD7NMHOQOhans2LvQFTkybegEiAXF9IT_AjawQWRAp5TnHc8p_iVmAh8Y8vTB6uxUeZO9JY_0xAdswe7EBF9h_BNsxH_JvlQIgKScvaD44G3LxsUZR8u_UjSv81fZ"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-12">
+<span class="text-primary text-xs uppercase tracking-widest mb-2 font-bold">Identity</span>
+<h4 class="serif-display text-3xl text-white">Vesper Spirits</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="section py-32 bg-surface-container-low" id="testimonials">
+<div class="px-12 lg:px-24">
+<div class="mb-20 text-center">
+<span class="text-primary font-label uppercase tracking-[0.4em] text-xs mb-4 block">Endorsements</span>
+<h2 class="serif-display text-5xl font-bold text-on-surface">Voices of Excellence</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<div class="flex flex-col gap-8 p-12 border border-outline-variant/10 bg-surface-container-lowest">
+<span class="material-symbols-outlined text-primary text-5xl opacity-40">format_quote</span>
+<p class="serif-display text-2xl italic leading-relaxed text-on-surface">
+                    "Aureum didn't just redesign our website; they re-architected our digital identity. The attention to detail and structural clarity brought a level of sophistication we hadn't seen in the industry."
+                </p>
+<div class="flex items-center gap-4 mt-4">
+<div class="h-[1px] w-8 bg-primary"></div>
+<div>
+<h4 class="text-on-surface font-bold uppercase tracking-widest text-xs">Alexander Thorne</h4>
+<p class="text-primary text-[10px] uppercase tracking-widest font-medium mt-1">CEO of Thorne &amp; Co. Luxury Brands</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-8 p-12 border border-outline-variant/10 bg-surface-container-lowest">
+<span class="material-symbols-outlined text-primary text-5xl opacity-40">format_quote</span>
+<p class="serif-display text-2xl italic leading-relaxed text-on-surface">
+                    "The translation of classical design principles into a modern digital interface is where Aureum truly excels. Our conversion rates reached new heights without sacrificing our brand's premium aesthetic."
+                </p>
+<div class="flex items-center gap-4 mt-4">
+<div class="h-[1px] w-8 bg-primary"></div>
+<div>
+<h4 class="text-on-surface font-bold uppercase tracking-widest text-xs">Isabella Vance</h4>
+<p class="text-primary text-[10px] uppercase tracking-widest font-medium mt-1">Creative Director, Elysium Global</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="section py-32" id="contact">
+<div class="px-12 lg:px-24">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-20">
+<span class="text-primary font-label uppercase tracking-[0.4em] text-xs mb-4 block">Inquiry</span>
+<h2 class="serif-display text-5xl font-bold text-on-surface mb-6">Start a Conversation</h2>
+<p class="text-on-surface-variant font-body">Ready to elevate your digital presence? Reach out to discuss your project.</p>
+</div>
+<form class="space-y-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="relative group">
+<label class="block text-[10px] uppercase tracking-widest text-primary font-bold mb-2">Full Name</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary text-on-surface placeholder:text-zinc-700 transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="relative group">
+<label class="block text-[10px] uppercase tracking-widest text-primary font-bold mb-2">Email Address</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary text-on-surface placeholder:text-zinc-700 transition-all" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="relative group">
+<label class="block text-[10px] uppercase tracking-widest text-primary font-bold mb-2">Project Vision</label>
+<textarea class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary text-on-surface placeholder:text-zinc-700 transition-all" placeholder="Tell me about your project..." rows="4"></textarea>
+</div>
+<div class="flex justify-center">
+<button class="bg-gradient-to-tr from-primary to-primary-container text-on-primary px-16 py-5 text-sm font-bold uppercase tracking-widest hover:translate-y-[-4px] transition-all shadow-xl shadow-black/20" type="submit">
+                        Send Message
+                    </button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-black w-full py-20 px-12 rounded-none flex flex-col md:flex-row justify-between items-center gap-8 border-t border-outline-variant/10">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="font-serif text-lg font-bold text-yellow-500 serif-display tracking-widest">AUREUM</div>
+<p class="font-serif text-[10px] uppercase tracking-widest text-zinc-500">© 2024 AUREUM. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex gap-12">
+<a class="font-serif text-[10px] uppercase tracking-widest text-zinc-600 hover:text-yellow-500 transition-colors duration-700 opacity-70 hover:opacity-100" href="#">LinkedIn</a>
+<a class="font-serif text-[10px] uppercase tracking-widest text-zinc-600 hover:text-yellow-500 transition-colors duration-700 opacity-70 hover:opacity-100" href="#">Instagram</a>
+<a class="font-serif text-[10px] uppercase tracking-widest text-zinc-600 hover:text-yellow-500 transition-colors duration-700 opacity-70 hover:opacity-100" href="#">Behance</a>
+<a class="font-serif text-[10px] uppercase tracking-widest text-zinc-600 hover:text-yellow-500 transition-colors duration-700 opacity-70 hover:opacity-100" href="#">Twitter</a>
+</div>
+</footer>
+</body></html>
