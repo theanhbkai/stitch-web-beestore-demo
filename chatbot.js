@@ -19,38 +19,38 @@ const sendBtn = document.getElementById('chatbot-send');
 // ====== INITIALIZE (Load Data & Event Listeners) ======
 
 async function initChatbot() {
-    // 1. Tải dữ liệu Knowledge Base
+    let knowledgeBase = "";
+    // 1. Tải dữ liệu Knowledge Base an toàn
     try {
         const response = await fetch('./chatbot_data.txt');
-        let knowledgeBase = "";
         if (response.ok) {
             knowledgeBase = await response.text();
         } else {
-            console.error("Không tải được cơ sở dữ liệu KB!");
+            console.warn("Không tìm thấy file chatbot_data.txt");
         }
+    } catch (error) {
+        console.warn("Lỗi tải file tĩnh do chạy qua giao thức file:// (CORS Local). Hệ thống tự kích hoạt dữ liệu dự phòng.");
+        knowledgeBase = `* Tên chuyên gia: Nguyễn Văn A\n* Định vị: Chuyên gia AI & Tự động hóa\n* Khóa học: K89 - Agentic AI\n* Liên hệ: a@example.com | Zalo 0123456789`;
+    }
 
-        // 2. Tạo System Prompt theo yêu cầu logic
-        systemPrompt = `Bạn là AI trợ lý cá nhân độc quyền trên website của chuyên gia Nguyễn Văn A.
+    // 2. Tạo System Prompt (ALWAYS EXECUTED)
+    systemPrompt = `Bạn là AI trợ lý cá nhân độc quyền trên website của chuyên gia Nguyễn Văn A.
 Nhiệm vụ của bạn là hỗ trợ khách truy cập lịch sự, cung cấp thông tin chính xác về các dịch vụ, khóa học, và dự án của chuyên gia này.
 
 Dưới đây là cơ sở dữ liệu kiến thức (Knowledge Base) của bạn:
 ${knowledgeBase}
 
 Quy tắc giao tiếp bắt buộc:
-1. Luôn chào hỏi thân thiện và kết thúc bằng cách mời họ đặt thêm câu hỏi.
+1. Luôn chào thân thiện.
 2. Bạn phải định dạng các câu trả lời của mình bằng Markdown đầy đủ (in đậm ý chính, dùng gạch đầu dòng, tạo code block nếu cần).
-3. Nếu người dùng hỏi điều gì ngoài phạm vi dữ liệu trên, hãy tế nhị từ chối và hướng dẫn họ gửi email hoặc nhắn tin Zalo trực tiếp cho chuyên gia. 
-4. Không được phép bịa đặt thông tin ngoài cơ sở dữ liệu đã cấp.`;
+3. Nếu người dùng hỏi điều gì ngoài phạm vi dữ liệu trên, hãy tế nhị từ chối và hướng dẫn họ liên hệ Zalo trực tiếp cho chuyên gia. 
+4. Không được phép bịa đặt thông tin.`;
 
-        // Setup lịch sử ban đầu
-        chatHistory = [{ role: "system", content: systemPrompt }];
+    // Setup lịch sử ban đầu (KHÔNG BAO GIỜ BỊ SÓT)
+    chatHistory = [{ role: "system", content: systemPrompt }];
 
-        // Lời chào đầu tiên
-        addAIMessage(DEFAULT_GREETING);
-
-    } catch (error) {
-        console.error("Initialization Failed:", error);
-    }
+    // Lời chào đầu tiên
+    addAIMessage(DEFAULT_GREETING);
 }
 
 // Chạy Init khi load trang xong
@@ -135,7 +135,7 @@ async function handleSend() {
 
     } catch (error) {
         removeElement(typingId);
-        addAIMessage("Xin lỗi, hệ thống AI đang bận. Vui lòng thử lại sau ít phút!");
+        addAIMessage("Xin lỗi, hệ thống AI đang bận hoặc có lỗi kết nối mạng (" + error.message + "). Vui lòng thử lại sau!");
         console.error("LLM API Fetch Error:", error);
     } finally {
         sendBtn.disabled = false;
