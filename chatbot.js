@@ -172,7 +172,12 @@ function showTypingIndicator() {
     const div = document.createElement('div');
     div.id = id;
     div.className = 'chatbot-message bot typing-indicator';
-    div.innerHTML = `<span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>`;
+    div.innerHTML = `
+        <div class="dots-wrapper">
+            <span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>
+        </div>
+        <div class="typing-text">Đang trả lời tin nhắn</div>
+    `;
     chatMessages.appendChild(div);
     scrollToBottom();
     return id; 
