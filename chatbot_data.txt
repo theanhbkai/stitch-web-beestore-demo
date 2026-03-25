@@ -1,5 +1,31 @@
-* Tên chuyên gia: Nguyễn Văn A
-* Định vị: Chuyên gia AI & Tự động hóa
-* Giải pháp: MCP server, N8N AI, đào tạo AI branding
-* Khóa học: K89 - Agentic AI (12 buổi, Online Zoom)
-* Liên hệ: a@example.com | Zalo 0123456789
+BEESTORE - cửa hàng điện thoại di động Chuyên iPhone, iPad, Macbook chính hãng
+Địa chỉ: 116G6B Nguyên Hồng - Thành Công - Ba Đình- Hà Nội
+Hotline: 0866808626 - 0979189538
+
+BEESTORE chuyên sưu tầm hàng chất, máy đẹp pin cao phục vụ khách hàng. Mặt hàng iPhone lock 
+đóng vai trò sản phẩm chủ đạo.
+Giới thiệu về iPhone lock ?
+iPhone lock (iPhone khóa mạng) là loại iPhone được sản xuất riêng cho một nhà mạng cụ thể (như AT&T, T-Mobile, Softbank...) và đi kèm với hợp đồng sử dụng dịch vụ của nhà mạng đó. 
+
+Đặc điểm chính của iPhone lock
+Hạn chế mạng: Máy chỉ có thể sử dụng SIM của chính nhà mạng phân phối. Nếu lắp SIM của nhà mạng khác (như Viettel, Vinaphone ở Việt Nam), máy sẽ báo sim không hỗ trợ và không sóng.
+Giá thành rẻ: Do có sự trợ giá từ nhà mạng, iPhone lock thường có giá rẻ hơn đáng kể so với iPhone quốc tế cùng model và tình trạng.
+Ngoại hình và cấu hình: Hoàn toàn giống hệt iPhone quốc tế về phần cứng, hiệu năng và tính năng.
+
+Cách sử dụng iPhone lock tại Việt Nam
+Để sử dụng được các nhà mạng khác, người dùng thường áp dụng hai phương pháp:
+Dùng SIM ghép: Một miếng mạch nhỏ đặt dưới SIM chính để "đánh lừa" máy nhận diện là SIM của nhà mạng gốc.
+Unlock (Mở khóa): Mua code từ nhà mạng hoặc sử dụng dịch vụ bên thứ ba để biến máy thành bản quốc tế vĩnh viễn.
+Độ khe SIM (iPhone CNC): Với các dòng iPhone chỉ có eSIM (như iPhone 14/15 bản Mỹ), người thợ phải cắt khung máy để lắp thêm khe SIM vật lý. 
+
+Ưu điểm 	
+Tiết kiệm chi phí (rẻ hơn 2-5 triệu đồng).	
+Trải nghiệm phần cứng tương đương máy quốc tế.	
+Phù hợp cho người thích trải nghiệm công nghệ giá rẻ.	
+
+Nhược điểm
+Sóng đôi khi không ổn định, dễ mất sóng khi vào vùng yếu.
+Rủi ro bị khóa lại nếu Apple quét các lỗ hổng SIM ghép.
+Gặp lỗi danh bạ, goolemaps không có xe máy, tiktok không có giỏ hàng (nếu dùng SIM ghép cũ). Nếu dùng sim ghép mới nhất, thì tự động fix full tuy nhiên thỉnh thoảng bị miss thông báo hoặc không quay
+được màn hình. Khách hàng sẽ reset cài dặt mạng bằng cách
+Vào Cài đặt - > Cài đặt chung -> Chuyển hoặc đặt lại iPhone -> Đăt lại -> Đặt lại tất cả cài đặt
