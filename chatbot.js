@@ -13,8 +13,8 @@ const closeBtn = document.getElementById('chatbot-close');
 const refreshBtn = document.getElementById('chatbot-refresh');
 const chatWindow = document.getElementById('chatbot-window');
 const chatMessages = document.getElementById('chatbot-messages');
-const chatInput = document.getElementById('chatbot-input');
-const sendBtn = document.getElementById('chatbot-send');
+const chatInput = document.getElementById('chat-input');
+const sendBtn = document.getElementById('send-btn');
 
 // ====== INITIALIZE (Load Data & Event Listeners) ======
 
@@ -58,14 +58,13 @@ document.addEventListener('DOMContentLoaded', initChatbot);
 
 // --- Toggle UI & Auto Focus ---
 toggleBtn.addEventListener('click', () => {
-    chatWindow.classList.remove('hidden');
-    setTimeout(() => chatWindow.classList.add('chatbot-visible'), 10);
+    // Với File CSS của bạn, hiển thị Chatbot chỉ cần thêm class 'open'
+    chatWindow.classList.add('open');
     setTimeout(() => chatInput.focus(), 300);
 });
 
 closeBtn.addEventListener('click', () => {
-    chatWindow.classList.remove('chatbot-visible');
-    setTimeout(() => chatWindow.classList.add('hidden'), 300);
+    chatWindow.classList.remove('open');
 });
 
 // --- Logic Nút Refresh BẮT BUỘC ---
@@ -92,6 +91,11 @@ refreshBtn.addEventListener('click', () => {
 sendBtn.addEventListener('click', handleSend);
 chatInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') handleSend();
+});
+
+// Xử lý chặn nút Gửi khi input rỗng
+chatInput.addEventListener('input', () => {
+    sendBtn.disabled = chatInput.value.trim() === '';
 });
 
 // ====== LOGIC API & UI ======
@@ -147,9 +151,8 @@ async function handleSend() {
 
 function addUserMessage(text) {
     const div = document.createElement('div');
-    // We override styles using the style attribute briefly if CSS classes are mixed with AUREUM 
-    // Here we use the msg-user class from our chatbot.css
-    div.className = 'msg-user';
+    // Class `.user` .chatbot-message được CSS của bạn định dạng
+    div.className = 'chatbot-message user';
     div.textContent = text;
     chatMessages.appendChild(div);
     scrollToBottom();
@@ -157,7 +160,7 @@ function addUserMessage(text) {
 
 function addAIMessage(markdownText) {
     const div = document.createElement('div');
-    div.className = 'msg-ai chat-markdown';
+    div.className = 'chatbot-message bot chat-markdown';
     // Parser sinh Markdown -> HTML bằng marked.js
     div.innerHTML = marked.parse(markdownText);
     chatMessages.appendChild(div);
@@ -168,8 +171,8 @@ function showTypingIndicator() {
     const id = 'typing-' + Date.now();
     const div = document.createElement('div');
     div.id = id;
-    div.className = 'msg-ai typing-indicator p-3 flex items-center justify-center';
-    div.innerHTML = `<span></span><span></span><span></span>`;
+    div.className = 'chatbot-message bot typing-indicator';
+    div.innerHTML = `<span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>`;
     chatMessages.appendChild(div);
     scrollToBottom();
     return id; 
