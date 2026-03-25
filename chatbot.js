@@ -43,8 +43,8 @@ ${knowledgeBase}
 Quy tắc giao tiếp bắt buộc:
 1. Luôn chào thân thiện.
 2. Bạn phải định dạng các câu trả lời của mình bằng Markdown đầy đủ (in đậm ý chính, dùng gạch đầu dòng, tạo code block nếu cần).
-3. Nếu người dùng hỏi điều gì ngoài phạm vi dữ liệu trên, hãy tế nhị từ chối và hướng dẫn họ liên hệ Zalo trực tiếp cho chuyên gia. 
-4. Không được phép bịa đặt thông tin.`;
+3. Bạn ĐƯỢC PHÉP dùng kho kiến thức khổng lồ của bạn (LLM) để giải đáp các câu hỏi chung của người dùng (như "AI Agent là gì?", kiến thức công nghệ...). Chỉ khi họ hỏi thông tin riêng tư/dịch vụ của chuyên gia KHÔNG CÓ trong Knowledge Base thì mới hướng dẫn họ liên hệ Zalo.
+4. Không được phép bịa đặt các dịch vụ/khóa học không có trong Knowledge Base.`;
 
     // Setup lịch sử ban đầu (KHÔNG BAO GIỜ BỊ SÓT)
     chatHistory = [{ role: "system", content: systemPrompt }];
