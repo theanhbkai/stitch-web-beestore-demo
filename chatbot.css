@@ -213,15 +213,16 @@
 }
 
 .bot-avatar {
-    width: 32px;
-    height: 32px;
+    width: 34px; /* Tăng nhẹ viền tổng thể 1 chút */
+    height: 34px;
     border-radius: 50%;
-    object-fit: cover;
-    border: 1px solid rgba(233, 195, 73, 0.4); /* Viền màu vàng AUREUM */
+    object-fit: contain; /* Ép toàn bộ ảnh phải hiển thị đầy đủ, không bị xén gọn như cover */
+    padding: 4px; /* Tạo khoảng trống 4px ép logo nhỏ lại nằm lọt thỏm trong vòng tròn */
+    border: 1px solid rgba(233, 195, 73, 0.5); /* Nhấn viền vàng cho nổi */
     background-color: #000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     flex-shrink: 0;
-    image-rendering: -webkit-optimize-contrast; /* Làm nét ảnh */
+    image-rendering: -webkit-optimize-contrast; 
     margin-top: 2px;
 }
 
