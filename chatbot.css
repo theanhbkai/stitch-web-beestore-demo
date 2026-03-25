@@ -1,24 +1,32 @@
-/* Glassmorphism & Animations */
+/* Glassmorphism Panel */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
 .chatbot-visible {
     transform: translateY(0) !important;
     opacity: 1 !important;
     display: flex !important;
 }
 
-.spin-animation {
-    animation: spin-refresh 0.5s linear infinite;
+/* Spin Animation cho nút Refresh */
+.spin-anim {
+    animation: spin 0.5s linear infinite;
 }
 
-@keyframes spin-refresh {
-    to { transform: rotate(360deg); }
+@keyframes spin {
+    100% { transform: rotate(360deg); }
 }
 
-/* Typing Indicator */
+/* Typing Indicator (3 dấu chấm) */
 .typing-indicator span {
     display: inline-block;
     width: 6px;
     height: 6px;
-    background-color: #99907c;
+    background-color: #6B7280;
     border-radius: 50%;
     margin: 0 2px;
     animation: bounce 1.4s infinite ease-in-out both;
@@ -32,10 +40,11 @@
     40% { transform: scale(1); }
 }
 
-/* Markdown Styles (.chat-markdown) */
+/* Markdown Rendering Custom Styles (.chat-markdown) */
 .chat-markdown {
     font-size: 0.9rem;
-    color: #e5e2e1;
+    color: #1f2937;
+    word-wrap: break-word;
 }
 
 .chat-markdown p {
@@ -66,64 +75,68 @@
 
 .chat-markdown strong {
     font-weight: 600;
-    color: #f2ca50; /* primary */
+    color: #2563eb; /* Tailwin Blue 600 (Accent color) */
 }
 
 .chat-markdown code {
-    background-color: #2a2a2a; /* surface-container-high */
-    color: #f2ca50; 
+    background-color: #1e293b; 
+    color: #e2e8f0; 
     font-family: 'Fira Code', Consolas, monospace;
-    padding: 0.2rem 0.4rem;
+    padding: 0.15rem 0.35rem;
     border-radius: 0.25rem;
     font-size: 0.8rem;
 }
 
 .chat-markdown pre {
-    background-color: #1c1b1b;
+    background-color: #1e293b;
     padding: 1rem;
     border-radius: 0.5rem;
     overflow-x: auto;
     margin-bottom: 0.75rem;
-    border: 1px solid #353534;
 }
 
 .chat-markdown pre code {
     background-color: transparent;
     padding: 0;
-    color: #e5e2e1;
+    color: #f8fafc;
 }
 
 .chat-markdown blockquote {
-    border-left: 3px solid #b08c10;
+    border-left: 3px solid #3b82f6; 
     padding-left: 1rem;
     margin-bottom: 0.75rem;
-    color: #b5b3ac;
+    color: #64748b; 
     font-style: italic;
+    background: rgba(59, 130, 246, 0.05); /* Nền xanh rất nhạt */
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border-radius: 0 0.25rem 0.25rem 0;
 }
 
 .chat-markdown a {
-    color: #f2ca50;
+    color: #2563eb;
     text-decoration: underline;
 }
 
-/* Message Bubbles */
+/* Message Bubbles layout */
 .msg-user {
-    background-color: #f2ca50;
-    color: #3c2f00;
+    background-color: #2563eb;
+    color: white;
     border-radius: 1rem 1rem 0 1rem;
     padding: 0.75rem 1rem;
     max-width: 85%;
     align-self: flex-end;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 0.9rem;
 }
 
 .msg-ai {
-    background-color: #2a2a2a;
-    color: #e5e2e1;
+    background-color: white;
+    color: #1f2937;
     border-radius: 1rem 1rem 1rem 0;
     padding: 0.75rem 1rem;
-    max-width: 85%;
+    max-width: 90%;
     align-self: flex-start;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
-    border: 1px solid #353534;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
 }
