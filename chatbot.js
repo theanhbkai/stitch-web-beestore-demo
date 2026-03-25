@@ -2,7 +2,7 @@
 const API_URL = "https://9router.vuhai.io.vn/v1/chat/completions";
 const API_KEY = "sk-4bd27113b7dc78d1-lh6jld-f4f9c69f";
 const MODEL_NAME = "ces-chatbot-gpt-5.4";
-const DEFAULT_GREETING = "👋 Xin chào! Tôi là trợ lý AI thông minh tích hợp trên website. Tôi có thể giúp gì cho bạn hôm nay?";
+const DEFAULT_GREETING = "👋 Xin chào! Mình là trợ lý AI của cửa hàng BEESTORE. Bạn đang quan tâm đến dòng iPhone Lock giá tốt hay các sản phẩm Apple nào hôm nay?";
 
 let systemPrompt = "";
 let chatHistory = [];
@@ -30,21 +30,21 @@ async function initChatbot() {
         }
     } catch (error) {
         console.warn("Lỗi tải file tĩnh do chạy qua giao thức file:// (CORS Local). Hệ thống tự kích hoạt dữ liệu dự phòng.");
-        knowledgeBase = `* Tên chuyên gia: Nguyễn Văn A\n* Định vị: Chuyên gia AI & Tự động hóa\n* Khóa học: K89 - Agentic AI\n* Liên hệ: a@example.com | Zalo 0123456789`;
+        knowledgeBase = `* Tên cửa hàng: BEESTORE\n* Sản phẩm: iPhone Lock, Macbook, iPad\n* Ưu điểm: Rẻ hơn quốc tế 2-4 triệu, dùng sim ghép CNC vi vu sóng.\n* Liên hệ: Vui lòng nhắn tin Fanpage.`;
     }
 
     // 2. Tạo System Prompt (ALWAYS EXECUTED)
-    systemPrompt = `Bạn là AI trợ lý cá nhân độc quyền trên website của chuyên gia Nguyễn Văn A.
-Nhiệm vụ của bạn là hỗ trợ khách truy cập lịch sự, cung cấp thông tin chính xác về các dịch vụ, khóa học, và dự án của chuyên gia này.
+    systemPrompt = `Bạn là nhân viên tư vấn bán hàng kiêm kỹ thuật viên AI xuất sắc của cửa hàng BEESTORE.
+Nhiệm vụ của bạn là tư vấn nhiệt tình, chốt sale khéo léo và giải đáp các lỗi kỹ thuật cho khách hàng mua iPhone, iPad, Macbook, giải tỏa tâm lý e ngại của khách khi dùng iPhone Lock.
 
-Dưới đây là cơ sở dữ liệu kiến thức (Knowledge Base) của bạn:
+Dưới đây là cơ sở dữ liệu kiến thức (Knowledge Base) của cửa hàng:
 ${knowledgeBase}
 
 Quy tắc giao tiếp bắt buộc:
-1. Luôn chào thân thiện.
-2. Bạn phải định dạng các câu trả lời của mình bằng Markdown đầy đủ (in đậm ý chính, dùng gạch đầu dòng, tạo code block nếu cần).
-3. Bạn ĐƯỢC PHÉP dùng kho kiến thức khổng lồ của bạn (LLM) để giải đáp các câu hỏi chung của người dùng (như "AI Agent là gì?", kiến thức công nghệ...). Chỉ khi họ hỏi thông tin riêng tư/dịch vụ của chuyên gia KHÔNG CÓ trong Knowledge Base thì mới hướng dẫn họ liên hệ Zalo.
-4. Không được phép bịa đặt các dịch vụ/khóa học không có trong Knowledge Base.`;
+1. Luôn xưng hô là "Mình" và gọi khách là "Bạn" hoặc "Anh/Chị" một cách thân thiện.
+2. Bạn phải định dạng các câu trả lời của mình bằng Markdown đầy đủ (in đậm giá tiền, dùng gạch đầu dòng tính năng).
+3. Bạn ĐƯỢC PHÉP dùng kho kiến thức khổng lồ của bạn (LLM) để giải đáp các câu hỏi chung của người dùng liên quan đến thủ thuật Apple, công nghệ, so sánh các vi xử lý. Chỉ khi họ hỏi thông tin bảo hành mập mờ KHÔNG CÓ trong Knowledge Base thì mới hướng dẫn họ liên hệ Zalo kỹ thuật.
+4. Tôn vinh điểm mạnh của iPhone Lock (Giá rẻ, dùng ổn định như quốc tế qua SIM ghép). Không bao giờ nói xấu sản phẩm của cửa hàng.`;
 
     // Setup lịch sử ban đầu (KHÔNG BAO GIỜ BỊ SÓT)
     chatHistory = [{ role: "system", content: systemPrompt }];

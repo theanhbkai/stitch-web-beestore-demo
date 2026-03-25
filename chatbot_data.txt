@@ -1,31 +1,32 @@
-BEESTORE - cửa hàng điện thoại di động Chuyên iPhone, iPad, Macbook chính hãng
-Địa chỉ: 116G6B Nguyên Hồng - Thành Công - Ba Đình- Hà Nội
-Hotline: 0866808626 - 0979189538
+# 1. THÔNG TIN CHUNG VỀ CỬA HÀNG
+- Tên cửa hàng: BEESTORE
+- Định vị thương hiệu: Hệ thống bán lẻ các sản phẩm Apple (iPhone, iPad, Macbook) chính hãng uy tín.
+- Sản phẩm mũi nhọn (Best-seller): Các dòng máy iPhone Lock giá rẻ, chất lượng cao, độ ổn định tuyệt đối.
+- Giá trị cốt lõi: "Bảo hành tận tâm - Dùng Lock như Quốc Tế - Hỗ trợ kỹ thuật trọn đời".
+- Giờ mở cửa: 08h30 - 21h30 (Tất cả các ngày trong tuần).
 
-BEESTORE chuyên sưu tầm hàng chất, máy đẹp pin cao phục vụ khách hàng. Mặt hàng iPhone lock 
-đóng vai trò sản phẩm chủ đạo.
-Giới thiệu về iPhone lock ?
-iPhone lock (iPhone khóa mạng) là loại iPhone được sản xuất riêng cho một nhà mạng cụ thể (như AT&T, T-Mobile, Softbank...) và đi kèm với hợp đồng sử dụng dịch vụ của nhà mạng đó. 
+# 2. KIẾN THỨC VỀ IPHONE LOCK (BẮT BUỘC ĐỂ TƯ VẤN)
+- Định nghĩa: iPhone Lock là máy được mua kèm hợp đồng của các nhà mạng nước ngoài (Mỹ, Nhật...). Về phần cứng và thiết kế, nó GIỐNG HỆT 100% so với máy Quốc tế. Điểm khác duy nhất là bị khóa mạng tạm thời ở Việt Nam.
+- Ưu điểm cực lớn: Giá thành RẺ HƠN máy Quốc Tế từ 2-4 triệu VNĐ tùy dòng, giúp khách hàng tiết kiệm lượng lớn tài chính mà vẫn trải nghiệm cấu hình, camera tương đương.
+- Cách sử dụng ở VN: Khách hàng mua tại BEESTORE sẽ được ghép SIM ghép thần thánh (CNC hoặc mã ICCID trọn đời tùy thời điểm) để biến máy Lock thành máy Quốc Tế, dùng 4G, nghe gọi, FaceTime, iMessage hoàn toàn miễn phí và ổn định.
 
-Đặc điểm chính của iPhone lock
-Hạn chế mạng: Máy chỉ có thể sử dụng SIM của chính nhà mạng phân phối. Nếu lắp SIM của nhà mạng khác (như Viettel, Vinaphone ở Việt Nam), máy sẽ báo sim không hỗ trợ và không sóng.
-Giá thành rẻ: Do có sự trợ giá từ nhà mạng, iPhone lock thường có giá rẻ hơn đáng kể so với iPhone quốc tế cùng model và tình trạng.
-Ngoại hình và cấu hình: Hoàn toàn giống hệt iPhone quốc tế về phần cứng, hiệu năng và tính năng.
+# 3. GIẢI PHÁP XỬ LÝ LỖI IPHONE LOCK (TROUBLESHOOTING)
+## A. Khách bị mất sóng (Searching / No Service)
+- Nguyên nhân: Do di chuyển vào vùng xúy hoặc phôi SIM gặp trục trặc, vô tình tháo SIM.
+- Cách xử lý tạm thời: 
+  1. Bật chế độ Máy bay (Airplane Mode) khoảng 10 giây rồi tắt đi để máy dò lại sóng.
+  2. Nâng cấp phiên bản iOS mới nhất nếu đang ở bản quá cũ.
+  3. Báo khách MANG MÁY QUA BEESTORE để kỹ thuật viên kiểm tra phôi SIM ghép miễn phí.
 
-Cách sử dụng iPhone lock tại Việt Nam
-Để sử dụng được các nhà mạng khác, người dùng thường áp dụng hai phương pháp:
-Dùng SIM ghép: Một miếng mạch nhỏ đặt dưới SIM chính để "đánh lừa" máy nhận diện là SIM của nhà mạng gốc.
-Unlock (Mở khóa): Mua code từ nhà mạng hoặc sử dụng dịch vụ bên thứ ba để biến máy thành bản quốc tế vĩnh viễn.
-Độ khe SIM (iPhone CNC): Với các dòng iPhone chỉ có eSIM (như iPhone 14/15 bản Mỹ), người thợ phải cắt khung máy để lắp thêm khe SIM vật lý. 
+## B. Vấn đề Văng Active (Bị văng ra màn hình nhập Apple ID)
+- Tuyệt đối căn dặn khách: KHÔNG ĐƯỢC RESET DÒNG 2 (Erase All Content and Settings) đối với tất cả các dòng máy Lock nếu chưa hỏi ý kiến kỹ thuật viên.
+- Nếu lỡ bị văng Active: Khuyên khách cắm cáp vào máy tính sử dụng 3uTools hoặc mang tới cửa hàng để nhân viên bắn lại mã ICCID mới nhất. Không tự ý chọt SIM liên tục.
 
-Ưu điểm 	
-Tiết kiệm chi phí (rẻ hơn 2-5 triệu đồng).	
-Trải nghiệm phần cứng tương đương máy quốc tế.	
-Phù hợp cho người thích trải nghiệm công nghệ giá rẻ.	
+## C. Cập nhật phần mềm (iOS)
+- Khách tự hỏi "Máy Lock có update iOS được không?": Có, Cập nhật qua OTA bình thường (Cập nhật trong Cài đặt). Tuy nhiên, hãy khuyên khách nhắn tin hỏi Fanpage xem bản iOS mới đó đã ổn định cho SIM ghép chưa rồi hẵng lên để tránh lỗi pin hoặc sóng.
 
-Nhược điểm
-Sóng đôi khi không ổn định, dễ mất sóng khi vào vùng yếu.
-Rủi ro bị khóa lại nếu Apple quét các lỗ hổng SIM ghép.
-Gặp lỗi danh bạ, goolemaps không có xe máy, tiktok không có giỏ hàng (nếu dùng SIM ghép cũ). Nếu dùng sim ghép mới nhất, thì tự động fix full tuy nhiên thỉnh thoảng bị miss thông báo hoặc không quay
-được màn hình. Khách hàng sẽ reset cài dặt mạng bằng cách
-Vào Cài đặt - > Cài đặt chung -> Chuyển hoặc đặt lại iPhone -> Đăt lại -> Đặt lại tất cả cài đặt
+# 4. THÔNG TIN LIÊN HỆ & BẢO HÀNH
+- Địa chỉ: [Điền địa chỉ thật của cửa hàng vào đây]
+- Hotline / Zalo bảo hành & Kỹ thuật: [Điền số Zalo vào đây]
+- Fanpage: [Điền link rút gọn Fanpage vào đây]
+- Chính sách: Bảo hành phần cứng, 1 đổi 1 trong vòng 30 ngày nếu có lỗi từ nhà sản xuất. Hỗ trợ phần mềm, fix lỗi SIM ghép MIỄN PHÍ TRỌN ĐỜI cho máy mua tại BEESTORE.
