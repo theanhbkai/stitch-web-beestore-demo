@@ -159,18 +159,37 @@ function addUserMessage(text) {
 }
 
 function addAIMessage(markdownText) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'bot-message-wrapper';
+
+    const avatar = document.createElement('img');
+    avatar.src = 'logo.jpg';
+    avatar.className = 'bot-avatar';
+    avatar.alt = 'AI';
+
     const div = document.createElement('div');
     div.className = 'chatbot-message bot chat-markdown';
     // Parser sinh Markdown -> HTML bằng marked.js
     div.innerHTML = marked.parse(markdownText);
-    chatMessages.appendChild(div);
+    
+    wrapper.appendChild(avatar);
+    wrapper.appendChild(div);
+    chatMessages.appendChild(wrapper);
     scrollToBottom();
 }
 
 function showTypingIndicator() {
     const id = 'typing-' + Date.now();
+    const wrapper = document.createElement('div');
+    wrapper.id = id;
+    wrapper.className = 'bot-message-wrapper';
+
+    const avatar = document.createElement('img');
+    avatar.src = 'logo.jpg';
+    avatar.className = 'bot-avatar';
+    avatar.alt = 'AI';
+
     const div = document.createElement('div');
-    div.id = id;
     div.className = 'chatbot-message bot typing-indicator';
     div.innerHTML = `
         <div class="dots-wrapper">
@@ -178,7 +197,10 @@ function showTypingIndicator() {
         </div>
         <div class="typing-text">Đang trả lời tin nhắn</div>
     `;
-    chatMessages.appendChild(div);
+    
+    wrapper.appendChild(avatar);
+    wrapper.appendChild(div);
+    chatMessages.appendChild(wrapper);
     scrollToBottom();
     return id; 
 }

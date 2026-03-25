@@ -205,16 +205,34 @@
     /* Đảm bảo là block để nhận width 100% */
 }
 
+.bot-message-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+.bot-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(233, 195, 73, 0.4); /* Viền màu vàng AUREUM */
+    background-color: #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    flex-shrink: 0;
+    image-rendering: -webkit-optimize-contrast; /* Làm nét ảnh */
+    margin-top: 2px;
+}
+
 .chatbot-message.bot {
-    width: 100% !important;
-    max-width: 100% !important;
+    flex: 1; /* Cho phép giãn hết chiều rộng còn lại thay vì 100% */
+    max-width: calc(100% - 42px) !important;
     background: rgba(255, 255, 255, 0.08);
     color: #e5e2e1;
-    align-self: stretch !important;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 14px;
     overflow: visible;
-    /* Không cho phép cuộn bên trong tin nhắn */
     margin-right: 0 !important;
     margin-left: 0 !important;
 }
