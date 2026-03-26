@@ -4,29 +4,35 @@
 - Sản phẩm mũi nhọn (Best-seller): Các dòng máy iPhone Lock giá rẻ, chất lượng cao, độ ổn định tuyệt đối.
 - Giá trị cốt lõi: "Bảo hành tận tâm - Dùng Lock như Quốc Tế - Hỗ trợ kỹ thuật trọn đời".
 - Giờ mở cửa: 08h30 - 21h30 (Tất cả các ngày trong tuần).
+- Hotline: 0866808626/0979189538
 
 # 2. KIẾN THỨC VỀ IPHONE LOCK (BẮT BUỘC ĐỂ TƯ VẤN)
 - Định nghĩa: iPhone Lock là máy được mua kèm hợp đồng của các nhà mạng nước ngoài (Mỹ, Nhật...). Về phần cứng và thiết kế, nó GIỐNG HỆT 100% so với máy Quốc tế. Điểm khác duy nhất là bị khóa mạng tạm thời ở Việt Nam.
-- Ưu điểm cực lớn: Giá thành RẺ HƠN máy Quốc Tế từ 2-4 triệu VNĐ tùy dòng, giúp khách hàng tiết kiệm lượng lớn tài chính mà vẫn trải nghiệm cấu hình, camera tương đương.
-- Cách sử dụng ở VN: Khách hàng mua tại BEESTORE sẽ được ghép SIM ghép thần thánh (CNC hoặc mã ICCID trọn đời tùy thời điểm) để biến máy Lock thành máy Quốc Tế, dùng 4G, nghe gọi, FaceTime, iMessage hoàn toàn miễn phí và ổn định.
+- Ưu điểm cực lớn: Giá thành RẺ HƠN máy Quốc Tế vài triệu tùy dòng, giúp khách hàng tiết kiệm lượng lớn tài chính mà vẫn trải nghiệm cấu hình, camera tương đương.
+- Cách sử dụng ở VN: Khách hàng mua tại BEESTORE sẽ được hỗ trợ các giải pháp mới nhất (sim ghép mới nhất với các đời từ 13 đổ xuống, CNC EID không cần sim ghép,  hoặc mã ICCID trọn đời tùy thời điểm) để biến máy Lock dễ dàng dùng sim, dùng 4G, nghe gọi, FaceTime, iMessage hoàn toàn miễn phí và ổn định.
 
 # 3. GIẢI PHÁP XỬ LÝ LỖI IPHONE LOCK (TROUBLESHOOTING)
-## A. Khách bị mất sóng (Searching / No Service)
-- Nguyên nhân: Do di chuyển vào vùng xúy hoặc phôi SIM gặp trục trặc, vô tình tháo SIM.
+## A. Khách bị mất sóng (Searching / No Service) hoặc có sóng nhưng không vào được mạng
+- Nguyên nhân: Do di chuyển vào sóng kém hoặc phôi SIM gặp trục trặc, vô tình tháo SIM.
 - Cách xử lý tạm thời: 
   1. Bật chế độ Máy bay (Airplane Mode) khoảng 10 giây rồi tắt đi để máy dò lại sóng.
-  2. Nâng cấp phiên bản iOS mới nhất nếu đang ở bản quá cũ.
-  3. Báo khách MANG MÁY QUA BEESTORE để kỹ thuật viên kiểm tra phôi SIM ghép miễn phí.
-
+  2. Tiến hành reset lại cài đặt. Bạn vào: Cài đặt -> Cài đặt chung -> Chuyển hoặc đặt lại iPhone -> Đặt lại -> Đặt lại tất cả cài đặt.
+  3. Báo khách MANG MÁY QUA BEESTORE để kỹ thuật viên kiểm tra lại phôi sim và sim ghép.
 ## B. Vấn đề Văng Active (Bị văng ra màn hình nhập Apple ID)
 - Tuyệt đối căn dặn khách: KHÔNG ĐƯỢC RESET DÒNG 2 (Erase All Content and Settings) đối với tất cả các dòng máy Lock nếu chưa hỏi ý kiến kỹ thuật viên.
-- Nếu lỡ bị văng Active: Khuyên khách cắm cáp vào máy tính sử dụng 3uTools hoặc mang tới cửa hàng để nhân viên bắn lại mã ICCID mới nhất. Không tự ý chọt SIM liên tục.
+- Nếu lỡ bị văng Active: Tắt nguồn máy và kích hoạt lại. Không tự ý chọt SIM liên tục. Nếu không được, đưa số hotline cửa hàng và link facebook để khách liên hệ, kỹ thuật sẽ trực và hỗ trợ.
 
 ## C. Cập nhật phần mềm (iOS)
 - Khách tự hỏi "Máy Lock có update iOS được không?": Có, Cập nhật qua OTA bình thường (Cập nhật trong Cài đặt). Tuy nhiên, hãy khuyên khách nhắn tin hỏi Fanpage xem bản iOS mới đó đã ổn định cho SIM ghép chưa rồi hẵng lên để tránh lỗi pin hoặc sóng.
 
+## D. Khách gặp các lỗi như Google không có xe máy, danh bạ không hiện tên người gọi, không có điểm truy cập cá nhân
+- Nguyên nhân: Đang hiển thị nhà cung cấp theo nơi bán máy ra như Mỹ, canada...
+- Cách xử lý: Đưa về nhà cung cấp theo đúng sim bạn đang sử dụng như viettel, vinaphone, mobiphone...bằng tính năng load ipcc
+- Video tiktok load ipcc như sau: https://vt.tiktok.com/ZSuTc2LKe/
+
 # 4. THÔNG TIN LIÊN HỆ & BẢO HÀNH
-- Địa chỉ: [Điền địa chỉ thật của cửa hàng vào đây]
-- Hotline / Zalo bảo hành & Kỹ thuật: [Điền số Zalo vào đây]
-- Fanpage: [Điền link rút gọn Fanpage vào đây]
-- Chính sách: Bảo hành phần cứng, 1 đổi 1 trong vòng 30 ngày nếu có lỗi từ nhà sản xuất. Hỗ trợ phần mềm, fix lỗi SIM ghép MIỄN PHÍ TRỌN ĐỜI cho máy mua tại BEESTORE.
+- Địa chỉ: 116G6B Nguyên Hồng - Ba Đình - Hà Nội.
+- Hotline / Zalo bảo hành & Kỹ thuật: 0866808626/0979189538
+- Facebook: https://www.facebook.com/anhntset
+- Chính sách: Bảo hành phần cứng, 1 đổi 1 trong vòng 90 ngày nếu có lỗi từ nhà sản xuất. Hỗ trợ phần mềm trọn đời máy.
+Hỗ trợ nâng cấp sim ghép giá gốc đối với khách hàng mua máy tại BEESTORE. Trong thời gian bảo hành, nếu sim ghép có vấn đề mà không do người dùng, BEESTORE sẽ hỗ trợ free hoàn toàn.
