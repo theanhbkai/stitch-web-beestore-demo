@@ -2,7 +2,7 @@
 const API_URL = "https://9router.vuhai.io.vn/v1/chat/completions";
 const API_KEY = "sk-4bd27113b7dc78d1-lh6jld-f4f9c69f";
 const MODEL_NAME = "ces-chatbot-gpt-5.4";
-const DEFAULT_GREETING = "👋 Xin chào! Mình là trợ lý AI của cửa hàng BEESTORE. Bạn đang quan tâm đến dòng iPhone Lock giá tốt hay các sản phẩm Apple nào hôm nay?";
+const DEFAULT_GREETING = "👋 Xin chào! Mình là trợ lý AI của cửa hàng BEESTORE. Mình có thể giúp gì cho bạn ?";
 
 let systemPrompt = "";
 let chatHistory = [];
@@ -72,22 +72,22 @@ closeBtn.addEventListener('click', () => {
 // --- Logic Nút Refresh BẮT BUỘC ---
 refreshBtn.addEventListener('click', () => {
     const icon = refreshBtn.querySelector('span'); // Material icon span
-    
+
     // 1. Xoay icon
     icon.classList.add('spin-anim');
-    
+
     // 2. Xóa history UI && memory
     chatMessages.innerHTML = '';
     chatHistory = [{ role: "system", content: systemPrompt }];
-    
+
     // 3. Hiển thị lại tin nhắn default
     addAIMessage(DEFAULT_GREETING);
-    
+
     // Khôi phục hiển thị lại 3 nút gợi ý
     if (suggestionsContainer) {
         suggestionsContainer.style.display = 'flex';
     }
-    
+
     // 4. Đúng 500ms thì dừng
     setTimeout(() => {
         icon.classList.remove('spin-anim');
@@ -112,7 +112,7 @@ document.getElementById('chip-deal').addEventListener('click', () => {
 
 document.getElementById('chip-price').addEventListener('click', () => {
     chatInput.value = document.getElementById('chip-price').textContent.trim();
-    chatInput.dispatchEvent(new Event('input')); 
+    chatInput.dispatchEvent(new Event('input'));
     handleSend();
 });
 
@@ -155,7 +155,7 @@ async function handleSend() {
         });
 
         if (!response.ok) throw new Error("API Error: " + response.status);
-        
+
         const data = await response.json();
         const aiResponseText = data.choices[0].message.content;
 
@@ -198,7 +198,7 @@ function addAIMessage(markdownText) {
     div.className = 'chatbot-message bot chat-markdown';
     // Parser sinh Markdown -> HTML bằng marked.js
     div.innerHTML = marked.parse(markdownText);
-    
+
     wrapper.appendChild(avatar);
     wrapper.appendChild(div);
     chatMessages.appendChild(wrapper);
@@ -224,12 +224,12 @@ function showTypingIndicator() {
         </div>
         <div class="typing-text">Đang trả lời tin nhắn</div>
     `;
-    
+
     wrapper.appendChild(avatar);
     wrapper.appendChild(div);
     chatMessages.appendChild(wrapper);
     scrollToBottom();
-    return id; 
+    return id;
 }
 
 function removeElement(id) {
