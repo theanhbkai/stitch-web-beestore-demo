@@ -105,14 +105,19 @@ chatInput.addEventListener('input', () => {
     sendBtn.disabled = chatInput.value.trim() === '';
 });
 
-// Logic 3 nút gợi ý (Quick Replies)
-suggestionChips.forEach(chip => {
-    chip.addEventListener('click', () => {
-        const text = chip.textContent.trim();
-        chatInput.value = text;
-        chatInput.dispatchEvent(new Event('input')); // Mở khóa nút send nếu đang bị disable
-        handleSend();
-    });
+// Logic chuyên biệt cho 3 nút gợi ý
+document.getElementById('chip-deal').addEventListener('click', () => {
+    window.open('https://zalo.me/g/comutv606', '_blank');
+});
+
+document.getElementById('chip-price').addEventListener('click', () => {
+    chatInput.value = document.getElementById('chip-price').textContent.trim();
+    chatInput.dispatchEvent(new Event('input')); 
+    handleSend();
+});
+
+document.getElementById('chip-call').addEventListener('click', () => {
+    window.location.href = 'tel:0866808626';
 });
 
 // ====== LOGIC API & UI ======
