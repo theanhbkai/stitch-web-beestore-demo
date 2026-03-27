@@ -76,8 +76,12 @@
         <!-- Hero Section -->
         <section class="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 py-8 md:py-20">
             <div class="w-full md:w-1/2 flex justify-center order-1 md:order-1 px-8 md:px-0">
-                <!-- iPhone Image Placeholder -->
-                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-naturaltitanium?wid=1024&fmt=webp" alt="iPhone 15 Pro Titanium" class="w-full max-w-[280px] md:max-w-[420px] object-contain mix-blend-multiply drop-shadow-2xl hover:-translate-y-4 hover:scale-105 transition-all duration-700 ease-out cursor-pointer" />
+                <!-- iPhone Image Showcase -->
+                <div class="relative w-full max-w-[280px] md:max-w-[400px] rounded-[3rem] p-3 bg-gradient-to-br from-yellow-50 to-white/50 border border-yellow-100 shadow-2xl shadow-yellow-500/5 hover:-translate-y-2 hover:shadow-yellow-500/20 transition-all duration-700 ease-out cursor-pointer group">
+                    <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&q=80&w=800" alt="iPhone 17 Pro Max" class="w-full rounded-[2.5rem] object-cover aspect-[4/5] group-hover:scale-[1.02] transition-transform duration-700 drop-shadow-sm" />
+                    <!-- Subtle luxury reflection -->
+                    <div class="absolute inset-0 rounded-[3rem] bg-gradient-to-tr from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                </div>
             </div>
             <div class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left order-2 md:order-2">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-black mb-4 md:mb-6 leading-[1.15]">
@@ -153,18 +157,18 @@
 
         <!-- Social Redirect -->
         <section class="py-24 text-center">
-            <h2 class="text-2xl font-bold mb-4 text-gray-900">Social Redirect</h2>
-            <p class="text-gray-500 mb-10 max-w-sm mx-auto text-sm">Kết nối với chúng tôi qua TikTok / Facebook / Zalo để xem video thực tế mỗi ngày.</p>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">Kết nối với BEESTORE</h2>
+            <p class="text-gray-500 mb-10 max-w-sm mx-auto text-sm">Theo dõi qua TikTok / Facebook / Zalo để cập nhật bảng giá và video thực tế mỗi ngày.</p>
             <div class="flex flex-wrap justify-center gap-4">
-                <button class="bg-[#f0f0f0] hover:bg-[#e4e4e4] text-black px-12 py-3.5 rounded-full font-semibold transition flex items-center justify-center gap-2 text-sm shadow-sm">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" class="w-4 h-4 opacity-70" alt="TikTok"/> TikTok
-                </button>
-                <button class="bg-[#f0f9ff] hover:bg-[#e0f2fe] text-[#0ea5e9] px-12 py-3.5 rounded-full font-semibold transition flex items-center justify-center gap-2 text-sm shadow-sm">
+                <a href="#" class="bg-[#f0f0f0] hover:bg-[#e4e4e4] text-black px-12 py-3.5 rounded-full font-semibold transition flex items-center justify-center gap-2 text-sm shadow-sm ring-1 ring-gray-200">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" class="w-4 h-4 opacity-80" alt="TikTok"/> TikTok
+                </a>
+                <a href="https://www.facebook.com/anhntset" target="_blank" class="bg-[#f0f9ff] hover:bg-[#e0f2fe] text-[#0ea5e9] px-12 py-3.5 rounded-full font-semibold transition flex items-center justify-center gap-2 text-sm shadow-sm ring-1 ring-blue-100">
                     <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" class="w-4 h-4" alt="Facebook"/> Facebook
-                </button>
-                <button class="bg-[#0068ff] hover:bg-[#005ce6] text-white px-12 py-3.5 rounded-full font-semibold transition flex items-center justify-center gap-2 text-sm shadow-sm shadow-blue-500/20">
+                </a>
+                <a href="zalo_qr.jpg" target="_blank" class="bg-[#0068ff] hover:bg-[#005ce6] text-white px-12 py-3.5 rounded-full font-semibold transition flex items-center justify-center gap-2 text-sm shadow-sm shadow-blue-500/20 ring-1 ring-blue-600">
                     <span class="material-symbols-outlined text-[18px]">chat</span> Zalo
-                </button>
+                </a>
             </div>
         </section>
     </main>
