@@ -15,6 +15,8 @@ const chatWindow = document.getElementById('chatbot-window');
 const chatMessages = document.getElementById('chatbot-messages');
 const chatInput = document.getElementById('chat-input');
 const sendBtn = document.getElementById('send-btn');
+const suggestionsContainer = document.getElementById('chatbot-suggestions');
+const suggestionChips = document.querySelectorAll('.suggestion-chip');
 
 // ====== INITIALIZE (Load Data & Event Listeners) ======
 
@@ -81,6 +83,11 @@ refreshBtn.addEventListener('click', () => {
     // 3. Hiển thị lại tin nhắn default
     addAIMessage(DEFAULT_GREETING);
     
+    // Khôi phục hiển thị lại 3 nút gợi ý
+    if (suggestionsContainer) {
+        suggestionsContainer.style.display = 'flex';
+    }
+    
     // 4. Đúng 500ms thì dừng
     setTimeout(() => {
         icon.classList.remove('spin-anim');
@@ -98,11 +105,26 @@ chatInput.addEventListener('input', () => {
     sendBtn.disabled = chatInput.value.trim() === '';
 });
 
+// Logic 3 nút gợi ý (Quick Replies)
+suggestionChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+        const text = chip.textContent.trim();
+        chatInput.value = text;
+        chatInput.dispatchEvent(new Event('input')); // Mở khóa nút send nếu đang bị disable
+        handleSend();
+    });
+});
+
 // ====== LOGIC API & UI ======
 
 async function handleSend() {
     const text = chatInput.value.trim();
     if (!text) return;
+
+    // Ẩn 3 nút gợi ý đi để tối ưu diện tích sau khi đã bắt đầu chat
+    if (suggestionsContainer) {
+        suggestionsContainer.style.display = 'none';
+    }
 
     // Hiển thị user message
     addUserMessage(text);
