@@ -47,29 +47,27 @@
 <body class="bg-background text-gray-900 antialiased selection:bg-primary selection:text-white pb-20">
 
     <!-- Navbar -->
-    <div class="fixed top-4 left-0 right-0 z-40 px-4 md:px-8 flex justify-center">
-        <nav class="glass-nav rounded-full px-6 py-4 flex items-center justify-between w-full max-w-5xl shadow-sm border border-gray-200/60">
+    <div class="fixed top-4 left-0 right-0 z-50 px-2 md:px-8 flex justify-center">
+        <nav class="glass-nav rounded-full px-4 md:px-6 py-3.5 md:py-4 flex items-center justify-between w-full max-w-5xl shadow-sm border border-gray-200/60">
             <!-- Logo -->
-            <div class="flex items-center gap-2 pl-2">
-                <div class="relative w-8 h-8 rounded-full flex items-center justify-center font-bold text-xl italic text-gray-800">
-                    i<span class="text-yellow-500 material-symbols-outlined text-[16px] absolute -right-1 -top-1 bg-white rounded-full">check_circle</span>
-                </div>
+            <div class="flex items-center gap-2 shrink-0">
+                <img src="logo.jpg" alt="BEESTORE" class="w-8 h-8 md:w-9 md:h-9 rounded-full object-contain bg-black p-[2px] border border-yellow-500/50 shadow-sm">
+                <span class="font-bold text-gray-900 tracking-tight text-sm md:text-base">BEESTORE</span>
             </div>
             
-            <!-- Links -->
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-500">
-                <a href="#" class="text-black font-semibold">Trang chủ</a>
-                <a href="#" class="hover:text-black transition">Về chúng tôi</a>
-                <a href="#" class="hover:text-black transition">Sản phẩm</a>
-                <a href="#" class="hover:text-black transition">Dịch vụ</a>
-                <a href="#" class="hover:text-black transition">Liên hệ</a>
+            <!-- Links (Scrollable on Mobile) -->
+            <div class="flex overflow-x-auto hide-scroll items-center gap-5 md:gap-8 text-[13px] md:text-sm font-medium text-gray-500 px-4 flex-1 mx-2 snap-x">
+                <a href="#" class="text-black font-semibold whitespace-nowrap snap-start">Trang chủ</a>
+                <a href="#" class="hover:text-black transition whitespace-nowrap snap-start">Về chúng tôi</a>
+                <a href="#" class="hover:text-black transition whitespace-nowrap snap-start">Sản phẩm</a>
+                <a href="#" class="hover:text-black transition whitespace-nowrap snap-start">Dịch vụ</a>
+                <a href="#" class="hover:text-black transition whitespace-nowrap snap-start">Liên hệ</a>
             </div>
 
             <!-- Actions -->
-            <div class="flex items-center gap-4 text-gray-700 pr-2">
-                <button class="hover:text-black transition"><span class="material-symbols-outlined text-xl">search</span></button>
+            <div class="flex items-center gap-3 text-gray-700 shrink-0">
+                <button class="hover:text-black transition hidden md:block"><span class="material-symbols-outlined text-xl">search</span></button>
                 <button class="hover:text-black transition"><span class="material-symbols-outlined text-xl">chat_bubble</span></button>
-                <button class="md:hidden"><span class="material-symbols-outlined text-xl">menu</span></button>
             </div>
         </nav>
     </div>
