@@ -2,6 +2,7 @@
 const API_URL = "https://9router.vuhai.io.vn/v1/chat/completions";
 const API_KEY = "sk-4bd27113b7dc78d1-lh6jld-f4f9c69f";
 const MODEL_NAME = "ces-chatbot-gpt-5.4";
+
 const DEFAULT_GREETING = "👋 Xin chào! Mình là trợ lý AI của cửa hàng BEESTORE. Mình có thể giúp gì cho bạn ?";
 
 // === LEAD CAPTURE CONFIG ===
@@ -249,22 +250,28 @@ function processAIResponse(aiResponse, chatHistoryArray = []) {
  * leadData có thể null nếu AI không phát hiện thông tin cá nhân
  */
 async function sendLeadToGoogleSheets(leadData, chatHistoryText) {
+    const payload = {
+        name: leadData ? (leadData.name || '') : '',
+        phone: leadData ? (leadData.phone || '') : '',
+        email: leadData ? (leadData.email || '') : '',
+        interest: leadData ? (leadData.interest || '') : '',
+        intentLevel: leadData ? (leadData.intent_level || '') : '',
+        source: window.location.href,
+        sessionId: AI_CHAT_SESSION_ID,
+        chatHistory: chatHistoryText || '',
+        timestamp: new Date().toLocaleString('vi-VN')
+    };
+
+    // 🐛 DEBUG: Kiểm tra dữ liệu trước khi gửi
+    console.log('📋 PAYLOAD GỬI ĐI:', JSON.stringify(payload, null, 2));
+    console.log('📝 Lịch sử chat (length=' + (chatHistoryText || '').length + '):', chatHistoryText);
+
     try {
         await fetch(GOOGLE_SCRIPT_URL, {
             method: 'POST',
             mode: 'no-cors',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                name: leadData ? (leadData.name || '') : '',
-                phone: leadData ? (leadData.phone || '') : '',
-                email: leadData ? (leadData.email || '') : '',
-                interest: leadData ? (leadData.interest || '') : '',
-                intentLevel: leadData ? (leadData.intent_level || '') : '',
-                source: window.location.href,
-                sessionId: AI_CHAT_SESSION_ID,
-                chatHistory: chatHistoryText,
-                timestamp: new Date().toLocaleString('vi-VN')
-            })
+            headers: { 'Content-Type': 'text/plain' },
+            body: JSON.stringify(payload)
         });
         console.log('📤 Đã đồng bộ dữ liệu vào Google Sheets!');
     } catch (err) {
