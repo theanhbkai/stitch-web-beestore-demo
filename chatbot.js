@@ -199,52 +199,54 @@ async function handleSend() {
 // ============================================================
 // LEAD CAPTURE: Bóc tách dữ liệu & Gửi lên Google Sheets
 // ============================================================
-
 /**
  * Xử lý response từ AI:
- * 1. Kiểm tra có tag ||LEAD_DATA:...|| không
- * 2. Nếu có → Parse JSON → Gửi lên Google Sheets kèm Lịch sử Chat & Session ID
- * 3. Xóa tag khỏi câu trả lời → Trả về câu trả lời sạch cho khách
+ * 1. Xây dựng lịch sử chat ĐẦY ĐỦ (bao gồm cả AI response hiện tại)
+ * 2. Kiểm tra có tag ||LEAD_DATA:...|| không → Parse + Gửi lead data
+ * 3. Luôn gửi cập nhật lịch sử chat lên Google Sheets
+ * 4. Xóa tag khỏi câu trả lời → Trả về câu trả lời sạch cho khách
  */
 function processAIResponse(aiResponse, chatHistoryArray = []) {
     const dataPattern = /\|\|LEAD_DATA:\s*(\{.*?\})\s*\|\|/;
+    const cleanAiResponse = aiResponse.replace(dataPattern, '').trim();
 
-    // Xây dựng Text Lịch sử Chat cho dễ đọc trên Google Sheets
+    // Xây dựng lịch sử chat ĐẦY ĐỦ (bao gồm cả tin nhắn AI hiện tại)
     let formattedHistory = "";
     if (chatHistoryArray && chatHistoryArray.length > 0) {
         formattedHistory = chatHistoryArray
-            .filter(msg => msg.role !== 'system') // Không lưu system prompt
+            .filter(msg => msg.role !== 'system')
             .map(msg => {
                 let role = msg.role === 'user' ? 'Khách' : 'AI';
                 let content = msg.content.replace(dataPattern, '').trim();
                 return `${role}: ${content}`;
             }).join('\n\n');
     }
+    // Thêm câu trả lời AI hiện tại vào cuối lịch sử
+    formattedHistory += '\n\nAI: ' + cleanAiResponse;
+
+    let leadData = null;
 
     if (aiResponse.includes('||LEAD_DATA:')) {
         const match = aiResponse.match(dataPattern);
-
         if (match && match[1]) {
             try {
-                const leadData = JSON.parse(match[1]);
+                leadData = JSON.parse(match[1]);
                 console.log('✅ Dữ liệu khách hàng bóc được:', leadData);
-
-                // Gửi dữ liệu nếu có ít nhất 1 trường hợp lệ
-                if (leadData.name || leadData.phone || leadData.email) {
-                    sendLeadToGoogleSheets(leadData, formattedHistory);
-                }
             } catch (error) {
                 console.error('❌ Lỗi parse JSON từ AI:', error);
             }
         }
-        // Xóa tag ẩn khỏi câu trả lời
-        aiResponse = aiResponse.replace(dataPattern, '').trim();
     }
-    return aiResponse;
+
+    // Luôn gửi cập nhật lịch sử chat (kèm lead data nếu có)
+    sendLeadToGoogleSheets(leadData, formattedHistory);
+
+    return cleanAiResponse;
 }
 
 /**
- * Gửi dữ liệu Lead lên Google Apps Script → Google Sheets
+ * Gửi dữ liệu Lead + Lịch sử Chat lên Google Apps Script → Google Sheets
+ * leadData có thể null nếu AI không phát hiện thông tin cá nhân
  */
 async function sendLeadToGoogleSheets(leadData, chatHistoryText) {
     try {
@@ -253,20 +255,20 @@ async function sendLeadToGoogleSheets(leadData, chatHistoryText) {
             mode: 'no-cors',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                name: leadData.name || '',
-                phone: leadData.phone || '',
-                email: leadData.email || '',
-                interest: leadData.interest || '',
-                intentLevel: leadData.intent_level || '',
+                name: leadData ? (leadData.name || '') : '',
+                phone: leadData ? (leadData.phone || '') : '',
+                email: leadData ? (leadData.email || '') : '',
+                interest: leadData ? (leadData.interest || '') : '',
+                intentLevel: leadData ? (leadData.intent_level || '') : '',
                 source: window.location.href,
                 sessionId: AI_CHAT_SESSION_ID,
                 chatHistory: chatHistoryText,
                 timestamp: new Date().toLocaleString('vi-VN')
             })
         });
-        console.log('📤 Đã đồng bộ dữ liệu Lead vào Google Sheets!');
+        console.log('📤 Đã đồng bộ dữ liệu vào Google Sheets!');
     } catch (err) {
-        console.warn('⚠️ Không gửi được dữ liệu lead:', err);
+        console.warn('⚠️ Không gửi được dữ liệu:', err);
     }
 }
 
