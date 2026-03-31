@@ -5,22 +5,9 @@
 // A: Thời gian | B: Tên | C: SĐT | D: Email | E: Quan tâm | F: Mức độ | G: Nguồn | H: Session ID | I: Lịch sử Chat
 // ============================================================
 
-// ⚙️ CẤU HÌNH — Lấy từ Script Properties (bảo mật, dễ bảo trì)
-var props = PropertiesService.getScriptProperties();
-var SPREADSHEET_ID = props.getProperty('SPREADSHEET_ID');
-var SALES_EMAIL = props.getProperty('SALES_EMAIL');
-
-// ============================================================
-// 🔧 CHẠY HÀM NÀY 1 LẦN DUY NHẤT ĐỂ CÀI ĐẶT CẤU HÌNH
-// (Mở Apps Script → Chọn hàm setupConfig → Nhấn ▶ Run)
-// ============================================================
-function setupConfig() {
-  PropertiesService.getScriptProperties().setProperties({
-    'SPREADSHEET_ID': 'THAY_SPREADSHEET_ID_CUA_BAN_VAO_DAY',
-    'SALES_EMAIL': 'THAY_EMAIL_CUA_BAN_VAO_DAY@gmail.com'
-  });
-  Logger.log('✅ Đã lưu cấu hình thành công! Bạn có thể deploy Web App.');
-}
+// ⚙️ CẤU HÌNH — THAY BẰNG THÔNG TIN THẬT CỦA BẠN
+var SPREADSHEET_ID = '1NSGufiHO_aKMhGs1L-Qfe7rm0mUZWnOvqVUFwyIcYsw';
+var SALES_EMAIL = 'theanhbkai@gmail.com';
 
 function doPost(e) {
   try {

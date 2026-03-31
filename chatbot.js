@@ -6,7 +6,7 @@ const MODEL_NAME = "ces-chatbot-gpt-5.4";
 const DEFAULT_GREETING = "👋 Xin chào! Mình là trợ lý AI của cửa hàng BEESTORE. Mình có thể giúp gì cho bạn ?";
 
 // === LEAD CAPTURE CONFIG ===
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzw_WxamNhOJfgTktNLo3vI1FhDnpUE5Y5blUHPtOjjw2NoQprkCNWP52IeUrpMjGQF7g/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzC3tsDLjkTH9Vb8fkkAZZ1tlZTeRNOpbgD15upvLrnvvbYAnkBP1Heo0eSIn9IRNyY/exec';
 let AI_CHAT_SESSION_ID = 'session_' + Date.now() + '_' + Math.random().toString(36).substring(2, 7);
 
 let systemPrompt = "";
