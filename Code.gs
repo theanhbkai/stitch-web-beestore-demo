@@ -5,9 +5,30 @@
 // A: Thời gian | B: Tên | C: SĐT | D: Email | E: Quan tâm | F: Mức độ | G: Nguồn | H: Session ID | I: Lịch sử Chat
 // ============================================================
 
-// ⚙️ CẤU HÌNH — THAY BẰNG THÔNG TIN THẬT CỦA BẠN
-var SPREADSHEET_ID = '1NSGufiHO_aKMhGs1L-Qfe7rm0mUZWnOvqVUFwyIcYsw';
-var SALES_EMAIL = 'theanhbkai@gmail.com';
+
+// ============================================================
+// FILE: Code.gs — Google Apps Script Nhận Dữ Liệu Lead từ Chatbot
+// ============================================================
+// CỘT GOOGLE SHEETS (9 cột, dòng 1):
+// A: Thời gian | B: Tên | C: SĐT | D: Email | E: Quan tâm | F: Mức độ | G: Nguồn | H: Session ID | I: Lịch sử Chat
+// ============================================================
+
+// ⚙️ CẤU HÌNH — Lấy từ Script Properties (bảo mật, dễ bảo trì)
+var props = PropertiesService.getScriptProperties();
+var SPREADSHEET_ID = props.getProperty('SPREADSHEET_ID');
+var SALES_EMAIL = props.getProperty('SALES_EMAIL');
+
+// ============================================================
+// 🔧 CHẠY HÀM NÀY 1 LẦN DUY NHẤT ĐỂ CÀI ĐẶT CẤU HÌNH
+// (Mở Apps Script → Chọn hàm setupConfig → Nhấn ▶ Run)
+// ============================================================
+function setupConfig() {
+  PropertiesService.getScriptProperties().setProperties({
+    'SPREADSHEET_ID': '1NSGufiHO_aKMhGs1L-Qfe7rm0mUZWnOvqVUFwyIcYsw',
+    'SALES_EMAIL': 'theanhbkai@gmail.com'
+  });
+  Logger.log('✅ Đã lưu cấu hình thành công! Bạn có thể deploy Web App.');
+}
 
 function doPost(e) {
   try {
